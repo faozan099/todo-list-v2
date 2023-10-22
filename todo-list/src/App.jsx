@@ -1,14 +1,15 @@
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import TodoList from './assets/page/TodoList'
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Todos from "./components/Todos";
+import DisplayTodos from "./components/DisplayTodos";
 
 function App() {
-
   return (
     <>
-      <TodoList/>
+      <Todos />
+      <DisplayTodos />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
