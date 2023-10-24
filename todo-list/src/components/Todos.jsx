@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTodos } from "../redux/reducer";
-import { GoPlus } from "react-icons/go";
-import { motion } from "framer-motion";
 
 const mapStateToProps = (state) => {
   return {
@@ -37,20 +35,21 @@ const Todos = (props) => {
   };
   //console.log("props from store", props);
   return (
-    <div className="addTodos">
-      <input
-        type="text"
-        onChange={(e) => handleChange(e)}
-        value={todo}
-      />
-
-      <button
-        onClick={() => add()}
-      >Add
-      </button>
+    <div className="container-lg d-flex justify-content-center align-items-center gap-2 pt-5">
+      <div>
+        <input
+          type="text"
+          onChange={(e) => handleChange(e)}
+          className="form-control"
+          id="todos"
+          style={{ width: "300px" }}
+        />
+      </div>
+      <button className="btn btn-primary" onClick={() => add()}>Add</button>
       <br />
     </div>
   );
 };
 //we can use connect method to connect this component with redux store
 export default connect(mapStateToProps, mapDispatchToProps)(Todos);
+

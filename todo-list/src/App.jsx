@@ -6,8 +6,11 @@ import DisplayTodos from "./components/DisplayTodos";
 function App() {
   return (
     <>
-      <Todos />
-      <DisplayTodos />
+      <div>
+        <h1 style={{textAlign: "center"}} className="pt-3">Todo App</h1>
+        <Todos />
+        <DisplayTodos />
+      </div>
     </>
   );
 }

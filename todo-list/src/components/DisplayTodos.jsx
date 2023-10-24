@@ -26,11 +26,11 @@ const mapDispatchToProps = (dispatch) => {
 function DisplayTodos(props) {
   const [sort, setSort] = useState("active");
   return (
-    <div className="displayTodos">
-      <div className="button">
-        <button onClick={() => setSort("active")}>Active</button>
-        <button onClick={() => setSort("completed")}>Completed</button>
-        <button onClick={() => setSort("all")}>All</button>
+    <div className="displayTodos container">
+      <div className="d-flex align-items-center justify-content-center pt-4 mb-5">
+        <button onClick={() => setSort("active")} className="btn btn-outline-primary">Active</button>
+        <button onClick={() => setSort("completed")} className="btn btn-outline-success mx-3">Completed</button>
+        <button onClick={() => setSort("all")} className="btn btn-outline-info">All</button>
       </div>
       <ul>
         {
