@@ -21,8 +21,10 @@ const Todos = (props) => {
     setTodo(e.target.value);
   };
 
+  const trimmedInput = todo.trim();
+
   const add = () => {
-    if (todo === "") {
+    if (trimmedInput === "") {
       alert("Input is Empty");
     } else {
       props.addTodo({
@@ -30,12 +32,12 @@ const Todos = (props) => {
         item: todo,
         completed: false,
       });
-      setTodo("");
     }
+    setTodo("");
   };
-  //console.log("props from store", props);
+
   return (
-    <div className="container-lg d-flex justify-content-center align-items-center gap-2 pt-5">
+    <div className="container d-flex justify-content-center align-items-center gap-2 pt-5">
       <div>
         <input
           type="text"
@@ -45,11 +47,12 @@ const Todos = (props) => {
           style={{ width: "300px" }}
         />
       </div>
-      <button className="btn btn-primary" onClick={() => add()}>Add</button>
+      <button className="btn btn-primary" onClick={() => add()}>
+        Add
+      </button>
       <br />
     </div>
   );
 };
-//we can use connect method to connect this component with redux store
-export default connect(mapStateToProps, mapDispatchToProps)(Todos);
 
+export default connect(mapStateToProps, mapDispatchToProps)(Todos);
