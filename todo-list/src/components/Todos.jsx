@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { addTodos } from "../redux/reducer";
+import { addTodos } from "../redux/reducers/reducer";
 
 const mapStateToProps = (state) => {
   return {

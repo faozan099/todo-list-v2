@@ -5,7 +5,7 @@ import {
   removeTodos,
   updateTodos,
   completedTodos,
-} from "../redux/reducer";
+} from "../redux/reducers/reducer";
 import TodoItems from "./TodoItems";
 
 const mapStateToProps = (state) => {
