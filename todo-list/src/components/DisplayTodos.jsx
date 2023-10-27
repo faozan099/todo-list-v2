@@ -79,7 +79,7 @@ function DisplayTodos(props) {
                 );
               })
             : null
-          // untuk completed items
+          // untuk all items
         }
         {
           props.todos.length > 0 && sort === "all"
