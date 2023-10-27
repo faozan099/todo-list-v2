@@ -17,9 +17,9 @@ const mapDispatchToProps = (dispatch) => {
 const Todos = (props) => {
   const [todo, setTodo] = useState("");
 
-  const handleChange = (e) => {
-    setTodo(e.target.value);
-  };
+  // const handleChange = (e) => {
+  //   setTodo(e.target.value);
+  // };
 
   const trimmedInput = todo.trim();
 
@@ -32,18 +32,17 @@ const Todos = (props) => {
         item: todo,
         completed: false,
       });
+      setTodo(""); // Pastikan ini ada di dalam blok else
     }
-    setTodo("");
-  };
-
-  return (
+  };  
+  
+    return (
     <div className="container d-flex justify-content-center align-items-center gap-2 pt-5">
       <div>
         <input
           type="text"
           onChange={(e) => handleChange(e)}
           className="form-control"
-          id="todos"
           style={{ width: "300px" }}
         />
       </div>
