@@ -32,7 +32,7 @@ const TodoItem = (props) => {
     <div className="container pt-3">
       <div className="d-flex justify-content-center align-items-center gap-3">
         {item.completed ? <button className="btn btn-success">Done</button> :
-        <button className="btn btn-danger">Not</button>}
+        <button className="btn btn-danger">Progress</button>}
         <div>
           <li key={item.id} style={{ listStyle: "none" }}>
             <input

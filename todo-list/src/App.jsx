@@ -6,10 +6,9 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<TodoList />} />
-      </Routes> */}
-      <TodoList/>
+      </Routes>
     </>
   );
 }
